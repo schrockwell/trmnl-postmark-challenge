@@ -1,1 +1,13 @@
-half vertical!
+<div class="layout">
+    <div class="column" data-list-limit="true">
+        {% if messages %}
+            {% for message in messages %}
+                {% render "message", message: message, size: 'small' %}
+            {% endfor %}
+        {% else %}
+            Nothing yet
+        {% endif %}
+    </div>
+</div>
+
+{% render "title_bar" %}

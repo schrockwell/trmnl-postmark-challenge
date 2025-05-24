@@ -1,1 +1,16 @@
-half horizontal!
+<div class="layout">
+    <div class="column" 
+        data-list-limit="true"
+        data-list-max-height="173"
+    >
+        {% if messages %}
+            {% for message in messages %}
+                {% render "message", message: message, size: 'small' %}
+            {% endfor %}
+        {% else %}
+            Nothing yet
+        {% endif %}
+    </div>
+</div>
+
+{% render "title_bar" %}
