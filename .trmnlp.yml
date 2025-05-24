@@ -1,0 +1,52 @@
+# TRMNLP configuration
+# {{ env.VARIABLE }} interpolation is available here
+---
+# auto-reload when files change (`watch: false` to disable)
+watch:
+  - .trmnlp.yml
+  - src
+
+# values of custom fields (defined in src/settings.yml)
+custom_fields: {}
+
+# override variables
+variables:
+  trmnl: {}
+  messages:
+    [
+      {
+        "subject": "Quote of the day",
+        "message": "Be who you are and say what you feel, because those who mind don't matter, and those who matter don't mind.",
+        "time": "2025-05-22T17:41:57.000Z",
+        "sender_name": "Rockwell Schrock",
+        "sender_email": "rockwell@schrock.me",
+      },
+      {
+        "subject": "Hi honey",
+        "message": "Please don't forget to take out the trash <3",
+        "time": "2025-05-22T17:41:57.000Z",
+        "sender_name": "Rockwell Schrock",
+        "sender_email": "rockwell@schrock.me",
+      },
+      {
+        "subject": "Package tracking",
+        "message": "Your order #123456 has been delivered",
+        "time": "2025-05-22T17:41:57.000Z",
+        "sender_name": "Rockwell Schrock",
+        "sender_email": "rockwell@schrock.me",
+      },
+      {
+        "subject": "Today's weather",
+        "message": "Expect sunny skies with a high of 75°F",
+        "time": "2025-05-22T17:41:57.000Z",
+        "sender_name": "Rockwell Schrock",
+        "sender_email": "rockwell@schrock.me",
+      },
+      {
+        "subject": "Your horoscope",
+        "message": "The stars predict tomorrow you'll wake up, do a bunch of stuff, and then go back to sleep",
+        "time": "2025-05-22T17:41:57.000Z",
+        "sender_name": "Rockwell Schrock",
+        "sender_email": "rockwell@schrock.me",
+      },
+    ]

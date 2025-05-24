@@ -1,0 +1,27 @@
+{% assign latest = messages | first %}
+{% assign rest = messages | slice: 1, 4 %}
+
+{% template message %}
+{% if size == 'small' %}
+    {% assign label_size = 'label--small' %}
+    {% assign content_size = '' %}
+{% else %}
+    {% assign label_size = '' %}
+    {% assign content_size = 'content--large' %}
+{% endif %}
+
+<div class="item flex flex--row w--full pb--1">
+    <div class="stretch ">
+        <div class="flex flex--col flex--left gap--xsmall">
+            <div class="label {{ label_size }} label--inverted">{{ message.subject }}</div>
+            <div class="richtext">
+                <div class="content {{ content_size }} clamp--3">{{ message.message }}</div>
+            </div>
+        </div>
+    </div>
+    <div class="flex flex--col flex--right gap--xsmall flex--center-y">
+        <div class="label {{ label_size }}">{{ message.sender_name }}</div>
+        <div class="label {{ label_size }}">{{ message.time | date: "%b %d" }}</div>
+    </div>
+</div>
+{% endtemplate %}
