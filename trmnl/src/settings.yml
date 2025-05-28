@@ -7,5 +7,13 @@ polling_verb: get
 polling_url: ''
 polling_headers: ''
 id: 74331
-name: Postmark Incoming Feed
+custom_fields:
+- keyname: doesnt_matter
+  name: About This Plugin
+  field_type: author_bio
+  description: 'This plugin was created for the Postmark Challenge: Inbox Innovators on DEV.to'
+  github_url: https://github.com/schrockwell/trmnl-postmark-challenge
+  learn_more_url: https://dev.to/challenges/postmark
+  email_address: rockwell@schrock.me
+name: PSTMRK
 refresh_interval: 1440
